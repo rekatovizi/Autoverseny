@@ -37,7 +37,22 @@ namespace Autoverseny
 
         private void Mozog(Button auto)
         {
-            
+            double aktualispozicio = Canvas.GetLeft(auto);
+            double sebesseg = r.Next(1, 6);
+            double ujpozicio = aktualispozicio + sebesseg;
+            Canvas.SetLeft(auto, ujpozicio);
+            if(ujpozicio >= celvonal)
+            {
+                timer.Stop();
+                MessageBox.Show("Az auto célba ért");
+            }
+        }
+
+        private void start_Click(object sender, RoutedEventArgs e)
+        {
+            Canvas.SetLeft(auto, 20);
+            timer.Start();
+
         }
     }
 }
