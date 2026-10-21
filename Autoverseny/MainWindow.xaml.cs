@@ -42,6 +42,10 @@ namespace Autoverseny
         {
             double aktualispozicio = Canvas.GetLeft(auto);
             double sebesseg = r.Next(1, 6);
+            if (auto == auto4)
+            {
+                sebesseg= sebesseg * 10;
+            }
             double ujpozicio = aktualispozicio + sebesseg;
             Canvas.SetLeft(auto, ujpozicio);
             if(ujpozicio >= celvonal)
@@ -56,8 +60,17 @@ namespace Autoverseny
             Canvas.SetLeft(auto, 20);
             Canvas.SetLeft(auto2, 20);
             Canvas.SetLeft(auto3, 20);
+            Canvas.SetLeft(auto4, 20);
             timer.Start();
 
+        }
+
+        private void auto4_Click(object sender, RoutedEventArgs e)
+        {
+            if (timer.IsEnabled)
+            {
+                Mozog(auto4);
+            }
         }
     }
 }

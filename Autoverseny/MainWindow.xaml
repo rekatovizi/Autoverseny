@@ -18,11 +18,12 @@
             <Button x:Name="auto" Content="Auto" Width="90" Height="45" Background="#FF69B969" Canvas.Left="20" Canvas.Top="50" />
             <Button x:Name="auto2" Content="Auto2" Width="90" Height="45" Background="Gainsboro" Canvas.Left="20" Canvas.Top="120" />
             <Button x:Name="auto3" Content="Auto3" Width="90" Height="45" Background="BlanchedAlmond" Canvas.Left="20" Canvas.Top="190" />
+            <Button x:Name="auto4" Content="Player" Width="90" Height="45" Background="#FFCDFFFE" Canvas.Left="20" Canvas.Top="260" Click="auto4_Click"/>
             <TextBox Height="334" Canvas.Right="0" Width="51">
                 <TextBox.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="Black" Offset="1"/>
-                        <GradientStop Color="White" Offset="0"/>
+                        <GradientStop Color="White"/>
                         <GradientStop Color="#FF7F7E7E" Offset="0.46"/>
                         <GradientStop Color="White"/>
                     </RadialGradientBrush>
