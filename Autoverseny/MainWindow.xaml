@@ -15,8 +15,11 @@
         </Grid.RowDefinitions>
         <Button x:Name="start" Content="Start" Width="90" Height="45" Grid.Row="1" Background="CornflowerBlue" Click="start_Click" />
         <Canvas x:Name="palya" Background="AliceBlue" Grid.Row="3">
-            <Button x:Name="auto" Content="Auto" Width="90" Height="45" Background="red" Canvas.Left="20" Canvas.Top="50" />
-            
+            <Button x:Name="auto" Content="Auto" Width="90" Height="45" Background="ForestGreen" Canvas.Left="20" Canvas.Top="50" />
+            <Button x:Name="auto2" Content="Auto2" Width="90" Height="45" Background="Gainsboro" Canvas.Left="20" Canvas.Top="120" />
+            <Button x:Name="auto3" Content="Auto3" Width="90" Height="45" Background="BlanchedAlmond" Canvas.Left="20" Canvas.Top="190" />
+            <TextBox Height="334" Canvas.Right="0" Width="51" Background="Beige"/>
+
         </Canvas>
 
     </Grid>

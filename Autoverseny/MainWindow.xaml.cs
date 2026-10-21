@@ -26,13 +26,16 @@ namespace Autoverseny
         {
             InitializeComponent();
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromMilliseconds(20);
+            timer.Interval = TimeSpan.FromMilliseconds(5);
             timer.Tick += Timer_Tick;
         }
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
             Mozog(auto);
+            Mozog(auto2);
+            Mozog(auto3);
+
         }
 
         private void Mozog(Button auto)
@@ -44,13 +47,15 @@ namespace Autoverseny
             if(ujpozicio >= celvonal)
             {
                 timer.Stop();
-                MessageBox.Show("Az auto célba ért");
+                MessageBox.Show($"Az {auto.Content} célba ért");
             }
         }
 
         private void start_Click(object sender, RoutedEventArgs e)
         {
             Canvas.SetLeft(auto, 20);
+            Canvas.SetLeft(auto2, 20);
+            Canvas.SetLeft(auto3, 20);
             timer.Start();
 
         }
